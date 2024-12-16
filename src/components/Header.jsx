@@ -8,7 +8,7 @@ import { LinkIcon, LogOut } from 'lucide-react';
 const Header = () => {
 
   const navigate =useNavigate();
-  const user=true;
+  const user=false;
   return (
    <nav className='py-4 flex justify-between items-center'>
     <Link to='/'>
@@ -16,7 +16,7 @@ const Header = () => {
     </Link>
      <div>
       {!user ?
-      <Button onClick={()=>navigate('/auth')}>Login</Button>
+      <Button onClick={()=>navigate('/auth')} className='rounded-xl' >Login</Button>
        : (
         <DropdownMenu>
   <DropdownMenuTrigger className='w-10 rounded-full overflow-hidden'>
